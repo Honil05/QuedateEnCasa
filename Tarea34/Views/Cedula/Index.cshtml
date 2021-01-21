@@ -1,0 +1,50 @@
+﻿@model Tarea34.Controllers.CedView
+
+<h1 class="titlee">Usted ha de tener esta lista pendiente: </h1>
+    <link href="~/lib/bootstrap/dist/css/InfoPrograma.css" rel="stylesheet" />
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="panel panel-default todo-panel">
+        <div class="panel-heading">@ViewData["Title"]</div>
+        <table class="table table-hover" >
+            <thead >
+                <tr>
+                    <td class="linea">cedula</td>
+                    <td class="linea">Nombre</td>
+                    <td class="linea">Apellido</td>
+                    <td class="linea">Correo</td>
+                    <td class="linea">Telefono</td>
+                </tr>
+            </thead>
+            @foreach (var Ced in Model.Ced)
+            {
+           
+                <tr >
+
+                    <td>@Ced.Cedula</td>
+                    <td>@Ced.Nombres</td>
+                    <td>@Ced.Apellido1</td>
+                    <td>@Ced.correo</td>
+                    <td>@Ced.telefono</td>
+                </tr>
+                }
+        </table>
+        <div class="panel-footer add-item-form">
+            <div class="panel-footer add-item-form">
+                @await Html.PartialAsync("Añadir", new cedula())
+            </div>
+
+        </div>
+    </div>

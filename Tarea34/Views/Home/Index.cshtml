@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="~/lib/bootstrap/dist/css/StyleBienvenida.css" rel="stylesheet" />
+
+<div class="text-lg-right">
+    <img src="~/css/log.png" width=400 alt="" />
+</div>
+<div class="word">
+    <span>B</span>
+    <span>I</span>
+    <span>E</span>
+    <span>N</span>
+    <span>V</span>
+    <span>E</span>
+    <span>N</span>
+    <span>I</span>
+    <span>D</span>
+    <span>O</span>
+</div>
+
+<div class="area">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<script>
+
+    const spans = document.querySelectorAll('.word span');
+
+    spans.forEach((span, idx) => {
+        span.addEventListener('click', (e) => {
+            e.target.classList.add('active');
+        });
+        span.addEventListener('animationend', (e) => {
+            e.target.classList.remove('active');
+        });
+
+        // Initial animation
+        setTimeout(() => {
+            span.classList.add('active');
+        }, 750 * (idx + 1))
+    });
+
+
+
+</script>

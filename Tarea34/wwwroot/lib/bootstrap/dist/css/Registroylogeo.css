@@ -1,0 +1,209 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+body {
+    background:rgba(0, 0, 0, 0.89);
+    position: sticky;
+    overflow: hidden;
+}
+
+
+
+.circles {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .circles li {
+        position: absolute;
+        display: normal;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        animation: animate 25s linear infinite;
+        bottom: -150px;
+        overflow: hidden;
+    }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+            overflow: hidden;
+        }
+
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+            overflow: hidden;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+            overflow: hidden;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 9s;
+            overflow: hidden;
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+            overflow: hidden;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 3s;
+            overflow: hidden;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 7s;
+            overflow: hidden;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 5s;
+            animation-duration: 3s;
+            overflow: hidden;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 5s;
+            overflow: hidden;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 0s;
+            animation-duration: 6s;
+            overflow: hidden;
+        }
+
+
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: bottom left repeat-x;
+    color: #ffF;
+}
+
+td, th {
+    background: #fff;
+    color: #000;
+}
+
+.linea {
+    background: rgba(0, 0, 0, 0.57);
+    color: white;
+    font-size: 18px;
+    font-family: 'Trebuchet MS';
+    background-color: rgba(255, 0, 0, 0.76);
+}
+
+.crear {
+    font-size: 18px;
+    color: rgba(255, 0, 0, 0.76);
+    animation-duration: 3s;
+    animation-name: slidein;
+    overflow: hidden;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    75% {
+        font-size: 100%;
+        margin-left: 25%;
+        width: 150%;
+        overflow: hidden;
+    }
+}
+
+.crear {
+    animation: 3s infinite alternate slidein;
+    overflow: hidden;
+}
+
+h1 {
+
+    font-family:'Trebuchet MS';
+    font-size: 35px;
+    margin-top:30px;
+    color:rgba(255, 255, 255, 0.72);
+}
+
+form {
+  
+    border-radius: 10px;
+    background-size: 800px;
+    color:white;
+    padding: 20px;
+    margin-top:50px;
+    background-color: rgba(246, 246, 246, 0.18);
+    text-align: justify;
+}
+

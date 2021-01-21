@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<link href="~/lib/bootstrap/dist/css/InfoPrograma.css" rel="stylesheet" />
+
+
+<div id="table">
+    <div id="centeralign">
+        <h1>Sabías que...</h1>
+        <p>
+            El presidente Danilo Medina anunció la implementación
+            del programa de ayuda temporal “Quédate en Casa”,
+            que proveerá ayuda económica a 1.5 millones de dominicanos
+            pobres, incluyendo a familias beneficiadas por el Prosoli;
+            Hogares que no reciben dicha ayuda y familias que viven de
+            la economía informal impedidos de salir a ganarse la vida
+            por las medidas en vigencia para evitar la propagación
+            del coronavirus en el país.
+
+
+        </p>
+    </div>
+
+</div>
+
+
+<img src="~/css/log.png" width=400 alt="" />
+
+<div class="area">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+
+<script>
+
+    function typeEffect(element, speed) {
+        var text = element.innerHTML;
+        element.innerHTML = "";
+
+        var i = 0;
+        var timer = setInterval(function () {
+            if (i < text.length) {
+                element.append(text.charAt(i));
+                i++;
+            } else {
+                clearInterval(timer);
+            }
+        }, speed);
+    }
+
+
+    // application
+    var speed = 20;
+    var h1 = document.querySelector('h1');
+    var p = document.querySelector('p');
+    var delay = h1.innerHTML.length * speed + speed;
+
+    // type affect to header
+    typeEffect(h1, speed);
+
+
+    // type affect to body
+    setTimeout(function () {
+        p.style.display = "inline-block";
+        typeEffect(p, speed);
+    }, delay);
+
+
+
+</script>
+
+
+
+

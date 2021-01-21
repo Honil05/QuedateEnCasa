@@ -1,0 +1,15 @@
+﻿@model cedula
+
+
+    <link href="~/lib/bootstrap/dist/css/CedulaRegistro.css" rel="stylesheet" />
+
+<form asp-action="Añadir" method="POST">
+    <label asp-for="Cedula">Introduzca su cedula: </label>
+    <input asp-for="Cedula"><br />
+    <label asp-for="correo">Introduzca su correo:</label>
+    <input asp-for="correo"><br />
+    <label asp-for="telefono">Introduzca su telefono:</label>
+    <input asp-for="telefono">
+
+    <button class="btn btn-pill btn-danger" type="submit">AÑADIR</button>
+</form>
